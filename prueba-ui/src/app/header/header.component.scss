@@ -1,5 +1,4 @@
 // TYPOGRAPHY
-
 mat-toolbar {
   h1 {
     color: white;
@@ -9,13 +8,23 @@ mat-toolbar {
     font-size: 2.625rem;
   }
 }
+
 // LAYOUT
-
-mat-toolbar {
-  background-color: var(--color-principal);
-
-  h1 {
-    color: white;
-    margin: 0 auto;
+header {
+  mat-toolbar {
+    background-color: var(--color-principal);
+    h1 {
+      color: white;
+      margin: 0 auto;
+      @media (min-width: 588px) {
+        width: 100%;
+        text-align: left;
+        max-width: 1200px;
+        margin: 2em auto 0 auto;
+      }
+    }
+    @media (min-width: 588px) {
+      height: 150px;
+    }
   }
 }
