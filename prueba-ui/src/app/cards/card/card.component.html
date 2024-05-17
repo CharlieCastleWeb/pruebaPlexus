@@ -1,0 +1,33 @@
+<mat-card>
+  <img
+    mat-card-image
+    src="../../../assets/img/london.jpg"
+    alt="London landscape"
+  />
+  <mat-card-content>
+    <div class="card-header">
+      <h3>London</h3>
+      <div class="rating">
+        <span class="icon-star-full yellow-star"></span>
+        <span class="icon-star-full yellow-star"></span>
+        <span class="icon-star-full yellow-star"></span>
+        <span class="icon-star-full gray-star"></span>
+        <span class="icon-star-full gray-star"></span>
+      </div>
+    </div>
+    <p class="cutoff-text" #cityDescription>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry’s standard dummy text ever since the
+      1500s, when an unknown printer took a galley of type and scrambled it to
+      make a type specimen book. It has survived not only five centuries, but
+      also the leap into electronic typesetting, remaining essentially
+      unchanged. It was popularised in the 1960s with the release of Letraset
+      sheets containing Lorem Ipsum passages, and more recently with desktop
+      publishing software like Aldus PageMaker including versions of Lorem
+      Ipsum.
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+        <span class="icon-circle-down" #expandBtn (click)="toggleText()"></span>
+</mat-card-actions>
+</mat-card>
