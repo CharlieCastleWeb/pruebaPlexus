@@ -1,11 +1,12 @@
 import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { City } from '../../models/city';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-card',
   standalone: true,
-  imports: [MatCardModule],
+  imports: [CommonModule, MatCardModule],
   templateUrl: './card.component.html',
   styleUrl: './card.component.scss',
 })
