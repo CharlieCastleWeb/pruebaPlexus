@@ -1,6 +1,3 @@
 <div class="cards-display">
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
+  <app-card *ngFor="let city of cities" [city]="city"></app-card>
 </div>
