@@ -21,6 +21,6 @@ export class CardComponent {
   toggleText() {
     this.expandBtn.nativeElement.classList.toggle('rotated');
     this.cityDescription.nativeElement.classList.toggle('cutoff-text');
-    console.log("toggle");
+    this.cityDescription.nativeElement.classList.toggle('expanded');
   }
 }

@@ -11,16 +11,16 @@ mat-card {
   }
   mat-card-content {
     .yellow-star.icon-star-full:before {
-        color: #eda128;
-      }
-      .gray-star.icon-star-full:before {
-        color: #C6C6C6;
-      }
+      color: #eda128;
+    }
+    .gray-star.icon-star-full:before {
+      color: #c6c6c6;
+    }
   }
   mat-card-actions {
     .icon-circle-down {
-        color: var(--color-principal);
-        font-size: 2rem;
+      color: var(--color-principal);
+      font-size: 2rem;
     }
   }
 }
@@ -44,30 +44,51 @@ mat-card {
     }
     p {
       margin-top: 1em;
+      transition: all 0.5s ease-in-out;
     }
     p.cutoff-text {
-        --max-lines: 6;
-        max-height: calc(var(--max-lines) * 1em);
-        overflow: hidden;
-        position: relative;
+      --max-lines: 7;
+      max-height: calc(var(--max-lines) * 1em);
+      overflow: hidden;
+      position: relative;
+    }
+    p.expanded {
+        max-height: 1000px;
+        clip-path: inset(0 0 0 0);
     }
     p.cutoff-text::before {
-        content: "";
-        position: absolute;
-        height: 1em;
-        width: 100%;
-        bottom: 0;
-        pointer-events: none;
-        background: linear-gradient(to bottom, transparent, white);
+      content: "";
+      position: absolute;
+      height: 1em;
+      width: 100%;
+      bottom: 0;
+      pointer-events: none;
+      background: linear-gradient(to bottom, transparent, white);
     }
+    p.expanded::before {
+        opacity: 0;
+      }
   }
   mat-card-actions {
-    span {
-        display: block;
-        margin: 0 auto;
+    position: relative;
+    padding: 0;
+    min-height: 30px !important;
+    .icon-circle-down {
+      cursor: pointer;
+      display: block;
+      width: 32px;
+      height: 32px;
+      margin: 0 auto;
+      background-color: white;
+      position: absolute;
+      left: 50%;
+      top: 90%;
+      transform: translate(-50%, -50%);
+      transition: all 0.5s ease-in-out;
+      transform-origin: center center;
     }
     .rotated {
-        transform: rotate(180deg);
+      transform: translate(-50%, -50%) rotate(180deg);
     }
   }
 }
