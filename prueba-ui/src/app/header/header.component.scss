@@ -1,0 +1,21 @@
+// TYPOGRAPHY
+
+mat-toolbar {
+  h1 {
+    color: white;
+    text-align: center;
+    font-weight: 400;
+    font-family: "Lato", sans-serif;
+    font-size: 2.625rem;
+  }
+}
+// LAYOUT
+
+mat-toolbar {
+  background-color: var(--color-principal);
+
+  h1 {
+    color: white;
+    margin: 0 auto;
+  }
+}
