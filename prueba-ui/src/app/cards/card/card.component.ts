@@ -1,5 +1,6 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
+import { City } from '../../models/city';
 
 @Component({
   selector: 'app-card',
@@ -8,7 +9,10 @@ import { MatCardModule } from '@angular/material/card';
   templateUrl: './card.component.html',
   styleUrl: './card.component.scss',
 })
+
 export class CardComponent {
+  @Input() city!: City;
+
   @ViewChild('expandBtn') expandBtn!: ElementRef;
   @ViewChild('cityDescription') cityDescription!: ElementRef;
 
@@ -17,6 +21,5 @@ export class CardComponent {
     this.expandBtn.nativeElement.classList.toggle('rotated');
     this.cityDescription.nativeElement.classList.toggle('cutoff-text');
     console.log("toggle");
-    
   }
 }
