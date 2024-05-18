@@ -9,19 +9,18 @@ import { CitiesService } from '../../services/cities.service';
   standalone: true,
   imports: [CardComponent, CommonModule],
   templateUrl: './cards-display.component.html',
-  styleUrl: './cards-display.component.scss'
+  styleUrl: './cards-display.component.scss',
 })
 export class CardsDisplayComponent implements OnInit {
   cities: City[] = [];
-  constructor(private citiesService: CitiesService) { }
+
+  constructor(private citiesService: CitiesService) {}
 
   ngOnInit(): void {
     this.getCities();
-    console.log(this.cities);
-    
   }
 
   getCities(): void {
-    this.cities = this.citiesService.getCities();
+    this.cities = this.citiesService.getCities() || [];
   }
 }
