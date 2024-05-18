@@ -1,30 +1,26 @@
 // TYPOGRAPHY
-mat-toolbar {
-  h1 {
-    color: white;
-    text-align: center;
-    font-weight: 400;
-    font-family: "Lato", sans-serif;
-    font-size: 2.625rem;
-  }
+mat-toolbar h1 {
+  color: white;
+  text-align: center;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+  font-size: 2.625rem;
 }
 
 // LAYOUT
-header {
-  mat-toolbar {
-    background-color: var(--color-principal);
-    h1 {
-      color: white;
-      margin: 0 auto;
-      @media (min-width: 588px) {
-        width: 100%;
-        text-align: left;
-        max-width: 1200px;
-        margin: 2em auto 0 auto;
-      }
-    }
+header mat-toolbar {
+  background-color: var(--color-principal);
+  h1 {
+    color: white;
+    margin: 0 auto;
     @media (min-width: 588px) {
-      height: 150px;
+      width: 100%;
+      text-align: left;
+      max-width: 1200px;
+      margin: 2em auto 0 auto;
     }
+  }
+  @media (min-width: 588px) {
+    height: 150px;
   }
 }
