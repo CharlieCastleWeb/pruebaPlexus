@@ -8,8 +8,14 @@
     <div class="card-header">
       <h3>{{ city.name }}</h3>
       <div class="rating">
-        <span *ngFor="let _ of [].constructor(city.rating)" class="icon-star-full yellow-star"></span>
-        <span *ngFor="let _ of [].constructor(5-city.rating)" class="icon-star-full gray-star"></span>
+        <span
+          *ngFor="let _ of [].constructor(city.rating)"
+          class="icon-star-full yellow-star"
+        ></span>
+        <span
+          *ngFor="let _ of [].constructor(5 - city.rating)"
+          class="icon-star-full gray-star"
+        ></span>
       </div>
     </div>
     <p class="cutoff-text" #cityDescription>
@@ -17,6 +23,6 @@
     </p>
   </mat-card-content>
   <mat-card-actions>
-        <span class="icon-circle-down" #expandBtn (click)="toggleText()"></span>
-</mat-card-actions>
+    <span class="icon-circle-down" #expandBtn (click)="toggleText()"></span>
+  </mat-card-actions>
 </mat-card>
