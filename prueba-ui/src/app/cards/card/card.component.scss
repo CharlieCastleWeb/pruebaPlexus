@@ -1,3 +1,9 @@
+
+// Variables
+$color-yellow-star: #eda128;
+$color-gray-star: #c6c6c6;
+$transition-duration: 0.7s;
+
 // Typography
 mat-card {
   margin-top: 1em;
@@ -11,10 +17,10 @@ mat-card {
   }
   mat-card-content {
     .yellow-star.icon-star-full:before {
-      color: #eda128;
+      color: $color-yellow-star;
     }
     .gray-star.icon-star-full:before {
-      color: #c6c6c6;
+      color: $color-gray-star;
     }
   }
   mat-card-actions {
@@ -44,7 +50,7 @@ mat-card {
     }
     p {
       margin-top: 1em;
-      transition: all 0.5s ease-in-out;
+      transition: all $transition-duration ease-in-out;
     }
     p.cutoff-text {
       --max-lines: 7;
@@ -53,8 +59,8 @@ mat-card {
       position: relative;
     }
     p.expanded {
-        max-height: 1000px;
-        clip-path: inset(0 0 0 0);
+      max-height: 1000px;
+      clip-path: inset(0 0 0 0);
     }
     p.cutoff-text::before {
       content: "";
@@ -66,14 +72,15 @@ mat-card {
       background: linear-gradient(to bottom, transparent, white);
     }
     p.expanded::before {
-        opacity: 0;
-      }
+      opacity: 0;
+    }
   }
   mat-card-actions {
     position: relative;
     padding: 0;
     min-height: 30px !important;
     .icon-circle-down {
+      border: none;
       cursor: pointer;
       display: block;
       width: 32px;
@@ -84,7 +91,7 @@ mat-card {
       left: 50%;
       top: 90%;
       transform: translate(-50%, -50%);
-      transition: all 0.5s ease-in-out;
+      transition: all $transition-duration ease-in-out;
       transform-origin: center center;
     }
     .rotated {

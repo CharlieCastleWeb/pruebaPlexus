@@ -3,18 +3,22 @@
     mat-card-image
     [src]="'../../../assets/img/' + city.img"
     [alt]="city.imgAlt"
+    role="img"
+    [attr.aria-labelledby]="city.imgAlt"
   />
   <mat-card-content>
     <div class="card-header">
       <h3>{{ city.name }}</h3>
-      <div class="rating">
+      <div class="rating" attr.aria-label="Rating: {{ city.rating }} out of 5">
         <span
           *ngFor="let _ of [].constructor(city.rating)"
           class="icon-star-full yellow-star"
+          aria-hidden="true"
         ></span>
         <span
           *ngFor="let _ of [].constructor(5 - city.rating)"
           class="icon-star-full gray-star"
+          aria-hidden="true"
         ></span>
       </div>
     </div>
@@ -23,6 +27,13 @@
     </p>
   </mat-card-content>
   <mat-card-actions>
-    <span class="icon-circle-down" #expandBtn (click)="toggleText()"></span>
+    <button
+      class="icon-circle-down"
+      #expandBtn
+      (click)="toggleText()"
+      aria-controls="cityDescription"
+    >
+      <span class="visually-hidden">Expand description</span>
+    </button>
   </mat-card-actions>
 </mat-card>
