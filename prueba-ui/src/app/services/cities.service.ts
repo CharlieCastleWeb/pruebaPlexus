@@ -8,7 +8,7 @@ export class CitiesService {
   private cities: City[] = [
     {
       name: 'London',
-      img: 'london.jpg',
+      img: 'london.webp',
       imgAlt: 'London landscape',
       rating: 4,
       description:
@@ -16,7 +16,7 @@ export class CitiesService {
     },
     {
       name: 'Hong Kong',
-      img: 'hong-kong.jpg',
+      img: 'hong-kong.webp',
       imgAlt: 'Hong Kong landscape',
       rating: 3,
       description:
@@ -24,7 +24,7 @@ export class CitiesService {
     },
     {
       name: 'New York',
-      img: 'new-york.jpg',
+      img: 'new-york.webp',
       imgAlt: 'New York landscape',
       rating: 5,
       description:
@@ -32,7 +32,7 @@ export class CitiesService {
     },
     {
       name: 'Sidney',
-      img: 'sidney.jpg',
+      img: 'sidney.webp',
       imgAlt: 'Sidney landscape',
       rating: 3,
       description:

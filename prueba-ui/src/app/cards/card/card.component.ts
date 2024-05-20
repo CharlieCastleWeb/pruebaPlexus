@@ -11,10 +11,10 @@ import { CommonModule } from '@angular/common';
   styleUrl: './card.component.scss',
 })
 export class CardComponent {
-  @Input() city!: City; 
+  @Input() city!: City;
 
-  @ViewChild('expandBtn') expandBtn!: ElementRef; 
-  @ViewChild('cityDescription') cityDescription!: ElementRef; 
+  @ViewChild('expandBtn') expandBtn!: ElementRef;
+  @ViewChild('cityDescription') cityDescription!: ElementRef;
 
   toggleText() {
     this.expandBtn.nativeElement.classList.toggle('rotated');

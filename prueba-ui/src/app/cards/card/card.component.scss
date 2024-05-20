@@ -1,20 +1,8 @@
-
-// Variables
-$color-yellow-star: #eda128;
-$color-gray-star: #c6c6c6;
-$transition-duration: 0.7s;
+@import "../../../styles.scss";
 
 // Typography
 mat-card {
   margin-top: 1em;
-  mat-card-content {
-    card-header {
-      h3 {
-        font-weight: 400;
-        font-size: 1.25rem;
-      }
-    }
-  }
   mat-card-content {
     .yellow-star.icon-star-full:before {
       color: $color-yellow-star;
@@ -25,7 +13,7 @@ mat-card {
   }
   mat-card-actions {
     .icon-circle-down {
-      color: var(--color-principal);
+      color: $color-primary;
       font-size: 2rem;
     }
   }
@@ -36,7 +24,7 @@ mat-card {
   margin-top: 1em;
   img {
     width: 100%;
-    height: 200px;
+    height: px-to-rem(200px);
     object-fit: cover;
   }
   mat-card-content {
@@ -45,12 +33,12 @@ mat-card {
       display: flex;
       justify-content: space-between;
       h3 {
-        color: var(--color-principal);
+        color: $color-primary;
       }
     }
     p {
       margin-top: 1em;
-      transition: all $transition-duration ease-in-out;
+      @include transition(all, $transition-duration);
     }
     p.cutoff-text {
       --max-lines: 7;
@@ -59,7 +47,7 @@ mat-card {
       position: relative;
     }
     p.expanded {
-      max-height: 1000px;
+      max-height: px-to-rem(1000px);
       clip-path: inset(0 0 0 0);
     }
     p.cutoff-text::before {
@@ -77,22 +65,18 @@ mat-card {
   }
   mat-card-actions {
     position: relative;
-    padding: 0;
-    min-height: 30px !important;
+    min-height: px-to-rem(30px) !important;
     .icon-circle-down {
-      border: none;
-      cursor: pointer;
-      display: block;
-      width: 32px;
-      height: 32px;
-      margin: 0 auto;
+      width: px-to-rem(32px);
+      height: px-to-rem(32px);
       background-color: white;
       position: absolute;
       left: 50%;
       top: 90%;
       transform: translate(-50%, -50%);
-      transition: all $transition-duration ease-in-out;
+      @include transition(all, $transition-duration);
       transform-origin: center center;
+      padding: 0;
     }
     .rotated {
       transform: translate(-50%, -50%) rotate(180deg);

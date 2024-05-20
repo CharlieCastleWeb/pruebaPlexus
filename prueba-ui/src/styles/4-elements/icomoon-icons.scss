@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "icomoon";
+  src: url("../../assets/fonts/icomoon-fonts/icomoon.eot?z46a21");
+  // src:  url('assets/fonts/icomoon-fonts/icomoon.eot?z46a21');
+  src: url("../../assets/fonts/icomoon-fonts/icomoon.eot?z46a21#iefix")
+      format("embedded-opentype"),
+    url("../../assets/fonts/icomoon-fonts/icomoon.woff2?z46a21")
+      format("woff2"),
+    url("../../assets/fonts/icomoon-fonts/icomoon.ttf?z46a21")
+      format("truetype"),
+    url("../../assets/fonts/icomoon-fonts/icomoon.woff?z46a21")
+      format("woff"),
+    url("../../assets/fonts/icomoon-fonts/icomoon.svg?z46a21#icomoon")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Enable Ligatures ================ */
+  letter-spacing: 0;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  font-feature-settings: "liga";
+  -webkit-font-variant-ligatures: discretionary-ligatures;
+  font-variant-ligatures: discretionary-ligatures;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-star-full:before {
+  content: "\e9d9";
+}
+.icon-circle-down:before {
+  content: "\ea43";
+}

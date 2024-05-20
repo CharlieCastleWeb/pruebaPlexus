@@ -1,0 +1,18 @@
+
+// Typography for header h1
+mat-toolbar h1 {
+    @include typography(2.625rem, 400, center);
+    color: white;
+  }
+
+// Typography for card header
+mat-card {
+    mat-card-content {
+      card-header {
+        h3 {
+          @include typography(1.25rem);
+          color: $color-primary;
+        }
+      }
+    }
+  }

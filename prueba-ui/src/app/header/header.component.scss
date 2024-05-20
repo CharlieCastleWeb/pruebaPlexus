@@ -1,26 +1,19 @@
-// TYPOGRAPHY
-mat-toolbar h1 {
-  color: white;
-  text-align: center;
-  font-weight: 400;
-  font-family: "Lato", sans-serif;
-  font-size: 2.625rem;
-}
+@import "../../styles.scss";
 
 // LAYOUT
 header mat-toolbar {
-  background-color: var(--color-principal);
+  background-color: $color-primary;
   h1 {
     color: white;
     margin: 0 auto;
-    @media (min-width: 588px) {
+    @media (min-width: $desktop-breakpoint) {
       width: 100%;
       text-align: left;
-      max-width: 1200px;
+      max-width: px-to-rem(1160px);
       margin: 2em auto 0 auto;
     }
   }
-  @media (min-width: 588px) {
-    height: 150px;
+  @media (min-width: $desktop-breakpoint) {
+    height: px-to-rem(150px);
   }
 }
