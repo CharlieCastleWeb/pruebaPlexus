@@ -1,29 +1,25 @@
+// 1-settings
+@import "./styles/1-settings/_colors.scss";
+@import "./styles/1-settings/_variables.scss";
 
-@import url(./icomoon-icons.scss);
-@import url(./google-fonts.scss);
+// 2-tools
+@import "./styles/2-tools/_functions.scss";
+@import "./styles/2-tools/_mixins.scss";
 
-// RESET
-html,
-body {
-  height: 100%;
-}
+// 3-generic
+@import "./styles/3-generic/_normalize.scss";
+@import "./styles/3-generic/_reset.scss";
 
-* {
-  margin: 0;
-  padding: 0;
-}
+// 4-elements
+@import "./styles/4-elements/_headings.scss";
+@import "./styles/4-elements/_typography.scss";
+@import "./styles/4-elements/google-fonts.scss";
+@import "./styles/4-elements/icomoon-icons.scss";
 
-// VARIABLES
-:root {
-  --color-principal: #2848b2;
-}
+// 5-objects
 
-// TYPOGRAPHY
-* {
-    font-family: "Lato", sans-serif;
-}
+// 6-components
+@import "./styles/6-components/_buttons.scss";
 
-// UTILITY CLASSES
-.visually-hidden {
-  display: none;
-}
+// 7-utilities
+@import "./styles/7-utilities/_utilities.scss";
